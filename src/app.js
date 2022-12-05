@@ -1,14 +1,12 @@
 const express = require('express');
 
-const sayHello = require('./lib/strings');
-
 const app = express();
 
 app.use(express.json());
 
-app.get('/strings/hello/:string', (_req, res) => {
-  res.status(200).json({ result: `Hello, world!` });
-});
+const stringsRoute = require('./routes/strings');
+
+app.use('/strings', stringsRoute);
 
 module.exports = app;
 
