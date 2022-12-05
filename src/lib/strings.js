@@ -6,7 +6,7 @@ function uppercase(string) {
   return string.toUpperCase();
 }
 
-function lowercase (string) {
+function lowercase(string) {
   return string.toLowerCase();
 }
 
@@ -28,5 +28,5 @@ module.exports = {
   lowercase,
   countCharacters,
   firstCharacter,
-  firstCharacters
+  firstCharacters,
 };
