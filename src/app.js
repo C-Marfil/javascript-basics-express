@@ -8,9 +8,13 @@ const stringsRoute = require('./routes/strings');
 
 const numbersRoute = require('./routes/numbers');
 
+const booleansRoute = require('./routes/booleans');
+
 app.use('/strings', stringsRoute);
 
 app.use('/numbers', numbersRoute);
+
+app.use('/booleans', booleansRoute);
 
 module.exports = app;
 
