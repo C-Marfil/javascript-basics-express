@@ -81,7 +81,7 @@ function isSquare(a) {
 
   if (rest === a) {
     return true;
-}
+  }
   return false;
 }
 
@@ -104,7 +104,7 @@ function isLowerCase(string) {
     return false;
   }
   return true;
-};
+}
 
 module.exports = {
   negate,
@@ -121,5 +121,5 @@ module.exports = {
   isSquare,
   startsWith,
   containsVowels,
-  isLowerCase
+  isLowerCase,
 };

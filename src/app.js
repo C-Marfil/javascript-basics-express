@@ -1,14 +1,24 @@
 const express = require('express');
 
-const sayHello = require('./lib/strings');
-
 const app = express();
 
 app.use(express.json());
 
-app.get('/strings/hello/:string', (_req, res) => {
-  res.status(200).json({ result: `Hello, world!` });
-});
+const stringsRoute = require('./routes/strings');
+
+const numbersRoute = require('./routes/numbers');
+
+const booleansRoute = require('./routes/booleans');
+
+const arraysRoute = require('./routes/arrays');
+
+app.use('/strings', stringsRoute);
+
+app.use('/numbers', numbersRoute);
+
+app.use('/booleans', booleansRoute);
+
+app.use('/arrays', arraysRoute);
 
 module.exports = app;
 

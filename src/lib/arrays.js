@@ -11,7 +11,6 @@ const csvStringToArray = string => {
   return array;
 };
 
-
 const addToArray = (element, array) => {
   array.push(element);
 };
@@ -27,7 +26,7 @@ const removeNthElement = (index, array) => {
 
 const numbersToStrings = numbers => {
   return numbers.map(String);
-}
+};
 
 const uppercaseWordsInArray = strings => {
   return strings.map(upc => {
@@ -40,7 +39,7 @@ const reverseWordsInArray = strings => {
     word
       .split('')
       .reverse()
-      .join('')
+      .join(''),
   );
 };
 
@@ -53,9 +52,8 @@ const onlyEven = numbers => {
   return numbers;
 };
 
-
 const removeNthElement2 = (index, array) => {
-  let a2 = [...array];
+  const a2 = [...array];
   a2.splice(index, 1);
   return a2;
 };
@@ -80,15 +78,15 @@ const sortByLastLetter = strings => {
       .split('')
       .reverse()
       .join('');
- }
+  }
   strings.sort();
   for (let i = 0; i < strings.length; i++) {
     strings[i] = strings[i]
       .split('')
       .reverse()
       .join('');
- }
- return strings;
+  }
+  return strings;
 };
 
 module.exports = {
@@ -106,5 +104,5 @@ module.exports = {
   elementsStartingWithAVowel,
   removeSpaces,
   sumNumbers,
-  sortByLastLetter
+  sortByLastLetter,
 };
