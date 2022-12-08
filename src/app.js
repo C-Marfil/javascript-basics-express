@@ -6,7 +6,11 @@ app.use(express.json());
 
 const stringsRoute = require('./routes/strings');
 
+const numbersRoute = require('./routes/numbers');
+
 app.use('/strings', stringsRoute);
+
+app.use('/numbers', numbersRoute);
 
 module.exports = app;
 
