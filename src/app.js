@@ -10,11 +10,15 @@ const numbersRoute = require('./routes/numbers');
 
 const booleansRoute = require('./routes/booleans');
 
+const arraysRoute = require('./routes/arrays');
+
 app.use('/strings', stringsRoute);
 
 app.use('/numbers', numbersRoute);
 
 app.use('/booleans', booleansRoute);
+
+app.use('/arrays', arraysRoute);
 
 module.exports = app;
 
